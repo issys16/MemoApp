@@ -21,7 +21,7 @@ export default function MemoList() {
           style={styles.memoDelete}
           onPress={() => { Alert.alert('Are you sure?'); }}
         >
-          <Feather name="x" size={16} color="#BOBOBO" />
+          <Feather name="x" size={16} />
         </TouchableOpacity>
       </TouchableOpacity>
       <TouchableOpacity
@@ -36,7 +36,7 @@ export default function MemoList() {
           style={styles.memoDelete}
           onPress={() => { Alert.alert('Are you sure?'); }}
         >
-          <Feather name="x" size={16} color="#BOBOBO" />
+          <Feather name="x" size={16} />
         </TouchableOpacity>
       </TouchableOpacity>
       <TouchableOpacity
@@ -51,7 +51,7 @@ export default function MemoList() {
           style={styles.memoDelete}
           onPress={() => { Alert.alert('Are you sure?'); }}
         >
-          <Feather name="x" size={16} color="#BOBOBO" />
+          <Feather name="x" size={16} />
         </TouchableOpacity>
       </TouchableOpacity>
     </View>

@@ -37,13 +37,15 @@ export default function MemoDetailScreen(props) {
         <Text style={styles.memoTitle} numberOfLines={1}>{memo && memo.bodyText}</Text>
         <Text style={styles.memoDate}>{memo && dateToString(memo.updatedAt)}</Text>
       </View>
-      <ScrollView style={styles.memoBody}>
-        <Text style={styles.memoText}>
-          {memo && memo.bodyText}
-        </Text>
+      <ScrollView>
+        <View style={styles.memoBodyInner}>
+          <Text style={styles.memoText}>
+            {memo && memo.bodyText}
+          </Text>
+        </View>
       </ScrollView>
       <CircleButton
-        style={{ top: 160, bottom: 'auto' }}
+        style={{ top: 60, bottom: 'auto' }}
         name="edit-2"
         onPress={() => { navigation.navigate('MemoEdit', { id: memo.id, bodyText: memo.bodyText }); }}
       />
@@ -80,8 +82,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
   },
-  memoBody: {
+  memoBodyInner: {
     paddingVertical: 32,
+    paddingBottom: 80,
     paddingHorizontal: 27,
   },
   memoText: {
